@@ -108,7 +108,11 @@ a {
 .header-links:active,
 .header-links-grey:active,
 .footer-adress-link:active,
-.footer-adress-link-grey:active {
+.footer-adress-link-grey:active,
+.header-links:focus,
+.header-links-grey:focus,
+.footer-adress-link:focus,
+.footer-adress-link-grey:focus {
   color: var(--txt-blue);
 }
 
@@ -126,7 +130,8 @@ a {
 }
 
 .btn-hero:hover,
-.btn-hero-active {
+.btn-hero:active,
+.btn-hero:focus {
   background: var(--blue-btn-hover);
 }
 
@@ -143,7 +148,8 @@ a {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+.btn:focus {
   background: var(--txt-blue);
   color: var(--background-header-n-photo);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -229,7 +235,7 @@ a {
 }
 
 /* ======= studio page ======= */
-/* ======= hero-section =======*/
+/* ======= Hero Section =======*/
 
 .hero-section {
   background: var(--background-dark);
@@ -248,7 +254,8 @@ a {
 }
 
 .hero-background-image {
-  background-image: url(../images/background-img-squooshed.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background-img-squooshed.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -256,11 +263,6 @@ a {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.hero-background-image:hover {
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/background-img-squooshed.jpg);
 }
 
 .hero-title {
@@ -289,19 +291,20 @@ a {
   color: var(--txt-header-mail-n-phone-n-phototxt);
 }
 
-.icon-antena::before {
-  background-image: url(../images/icon-antenna.svg);
+.studio-svg-div {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: var(--backgound-grey);
 }
 
-.icon-clock::before {
-  background-image: url(../images/icon-clock.svg);
-}
-
-.icon-diagramma::before {
-  background-image: url(../images/icon-diagram.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/icon-astronaut.svg);
+.icon-before {
+  width: 70px;
+  height: 70px;
 }
 
 /*======= studio-photo-section =======*/
@@ -334,19 +337,7 @@ a {
   justify-content: space-between;
 }
 
-.studio-central-info-item::before {
-  display: block;
-  content: '';
-  width: 270px;
-  height: 120px;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--backgound-grey);
-}
-
-/* ======= team-section ======= */
+/* ======= Team Section ======= */
 
 .team-section {
   background-color: var(--backgound-grey);
@@ -389,10 +380,15 @@ a {
   justify-content: space-between;
 }
 
-.social-webs-link {
-  display: flex;
+.item-of-socail-webs {
   width: 44px;
   height: 44px;
+}
+
+.social-webs-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -406,15 +402,21 @@ a {
 }
 
 .social-webs-link:hover,
-.footer-social-webs-link:hover {
+.footer-social-webs-link:hover,
+.social-webs-link:active,
+.footer-social-webs-link:active,
+.social-webs-link:focus,
+.footer-social-webs-link:focus {
   background-color: var(--blue-btn-hover);
 }
 
-.social-webs-link:hover .icon-social-web {
+.social-webs-link:hover .icon-social-web,
+.social-webs-link:active .icon-social-web,
+.social-webs-link:focus .icon-social-web {
   fill: var(--background-header-n-photo);
 }
 
-/* ======= companies-section ======= */
+/* ======= Companies Section ======= */
 
 .companies-link-list {
   display: flex;
@@ -435,25 +437,24 @@ a {
   padding: 16px 32px;
 }
 
-.companies-link-item:hover .icon-company {
-  fill: var(--txt-blue);
-}
-
-.companies-link-item:hover {
-  border-color: var(--txt-blue);
-}
-
 .icon-company {
   width: 106px;
   height: 60px;
   fill: var(--grey-for-icons);
 }
 
-.icon-company:hover {
-  fill: var(--txt-blue);
+.companies-link-item:hover,
+.companies-link-item:active,
+.companies-link-item:focus {
+  border-color: var(--txt-blue);
 }
 
-.companies-link-item:hover {
+.company-logo:hover,
+.company-logo:active,
+.company-logo:focus,
+.company-logo:hover .icon-company,
+.company-logo:active .icon-company,
+.company-logo:focus .icon-company {
   fill: var(--txt-blue);
 }
 
