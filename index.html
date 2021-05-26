@@ -32,7 +32,9 @@
         <nav class="header-logo-nav">
           <a href="./index.html" class="logo"><span class="half-logo">Web</span>Studio</a>
           <ul class="header-nav-list">
-            <li class="nav-list-item"><a href="./index.html" class="header-links">Студия</a></li>
+            <li class="nav-list-item">
+              <a href="./index.html" class="header-links current">Студия</a>
+            </li>
             <li class="nav-list-item">
               <a href="./portfolio.html" class="header-links">Портфолио</a>
             </li>
@@ -120,28 +122,43 @@
         <h2 class="studio-list-section-heading">Чем мы занимаемся</h2>
         <ul class="container studio-photo-list">
           <li class="studio-photo-card">
-            <img
-              src="./images/img1-jpeg-squoshed.jpg"
-              alt="работа с компьютером"
-              width="370"
-              height="294"
-            />
+            <div class="studio-photo-card-thumb">
+              <img
+                src="./images/img1-jpeg-squoshed.jpg"
+                alt="работа с компьютером"
+                width="370"
+                height="294"
+              />
+              <div class="studio-photo-card-text-div">
+                <p class="studio-photo-card-text">Десктопные приложения</p>
+              </div>
+            </div>
           </li>
           <li class="studio-photo-card">
-            <img
-              src="./images/img2-jpeg-squoshed.jpg"
-              alt="работа с телефоном"
-              width="370"
-              height="294"
-            />
+            <div class="studio-photo-card-thumb">
+              <img
+                src="./images/img2-jpeg-squoshed.jpg"
+                alt="работа с телефоном"
+                width="370"
+                height="294"
+              />
+              <div class="studio-photo-card-text-div">
+                <p class="studio-photo-card-text">Мобильные приложения</p>
+              </div>
+            </div>
           </li>
           <li class="studio-photo-card">
-            <img
-              src="./images/img3-jpeg-squoshed.jpg"
-              alt="работа с планшетом"
-              width="370"
-              height="294"
-            />
+            <div class="studio-photo-card-thumb">
+              <img
+                src="./images/img3-jpeg-squoshed.jpg"
+                alt="работа с планшетом"
+                width="370"
+                height="294"
+              />
+              <div class="studio-photo-card-text-div">
+                <p class="studio-photo-card-text">Дизайнерские решения</p>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
@@ -432,5 +449,16 @@
         </div>
       </div>
     </footer>
+    <!----------------------- modal part ------------------------------>
+
+    <div class="backdrop is-hidden">
+      <div class="modal-window">
+        <button type="button" class="modal-btn">
+          <svg class="icon-close">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
 </html>
