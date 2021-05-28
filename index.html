@@ -27,13 +27,14 @@
     </style>
   </head>
   <body class="body">
+    <!-------------------------- Header ------------------------------->
     <header class="header-section">
       <section class="container header-flex">
         <nav class="header-logo-nav">
           <a href="./index.html" class="logo"><span class="half-logo">Web</span>Studio</a>
           <ul class="header-nav-list">
             <li class="nav-list-item">
-              <a href="./index.html" class="header-links current">Студия</a>
+              <a href="./index.html" class="header-links current blue-line-studio">Студия</a>
             </li>
             <li class="nav-list-item">
               <a href="./portfolio.html" class="header-links">Портфолио</a>
@@ -66,7 +67,7 @@
       <section class="hero-section hero-background-image">
         <div class="hero-div">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="btn-hero">Заказать услугу</button>
+          <button data-modal-open type="button" class="btn-hero">Заказать услугу</button>
         </div>
       </section>
       <!-- Central Section -->
@@ -451,14 +452,15 @@
     </footer>
     <!----------------------- modal part ------------------------------>
 
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
-        <button type="button" class="modal-btn">
+        <button data-modal-close type="button" class="modal-btn">
           <svg class="icon-close">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
